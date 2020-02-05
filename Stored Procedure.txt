@@ -1,0 +1,9 @@
+create proc UserCheck
+(
+@username nvarchar(50),
+@password nvarchar(50)
+)
+as
+Begin
+SELECT Count(*) FROM UserCredentials WHERE UserName = ''+@username+'' and password = ''+@password+''
+END
